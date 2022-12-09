@@ -1,0 +1,54 @@
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+// --------------------
+
+* {
+    margin: 0;padding: 0;
+    border: 0; outline: none;
+    text-decoration: none;
+    list-style: none;
+    transition: all .3s ease;
+    font-family: poppins, sans-serif;
+}
+
+
+
+// variables -----------------------
+
+
+
+*::selection {
+    background: rgba($color: $p-c, $alpha: 0.5);
+}
+
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $p-c;
+    // border: 2px solid #000;
+    // border-right: none;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+a {
+    color: #fff;
+}

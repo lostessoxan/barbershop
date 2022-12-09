@@ -1,0 +1,101 @@
+#footer {
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+
+    #footer-title h1 {
+        transform: perspective(400px) rotateX(20deg);
+        font-size: 80px;
+        max-width: max-content;
+        margin: 0 auto;
+    }
+
+    .footer-img {
+        max-width: 370px;
+        opacity: 0.1;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+    }
+
+    .footer-row {
+        padding-top: 100px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .footer-left, .footer-right {
+            flex-basis: 45%;
+            padding: 10px;
+            margin-bottom: 20px;
+
+            i {
+                font-size: 20px;
+                color: $p-c;
+                margin: 10px;
+            }
+        }
+
+        .footer-left {
+            background: linear-gradient(to right, $add-c, transparent 70%);
+            transform: skewX(7deg) skewY(-2deg);
+            padding-left: 40px;
+            border-left: 2px solid $p-c;
+        }
+
+        .footer-right {
+            background: linear-gradient(to left, $add-c, transparent 70%);
+            transform: skewX(-10deg);
+            padding-right: 40px;
+            border-right: 2px solid $p-c;
+            text-align: right;
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 23px;
+        }
+
+        p {
+            line-height: 35px;
+            font-size: 14px;
+        }
+    }
+
+    .social-links {
+        text-align: center;
+
+        i {
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            line-height: 40px;
+            border: 1px solid $p-c;
+            border-right: none;
+            border-bottom: none;
+            margin: 40px 5px 0;
+            color: $p-c;
+            cursor: pointer;
+            transition: .5s;
+            transform:skewX(-10deg);
+            box-shadow: 1px 1px 0px #000,
+            2px 2px 0px #000,
+            3px 3px 0px #000;
+
+            &:hover {
+                background: $p-c;
+                color: #fff;
+                transform: translateY(-7px) skewX(-10deg);
+                // box-shadow: 0 5px 0px rgb(0, 0, 0);
+            }
+        }
+
+        p {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    }
+}

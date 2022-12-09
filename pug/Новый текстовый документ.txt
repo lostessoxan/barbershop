@@ -1,0 +1,1 @@
+pug --pretty -w index.pug order.pug portfolio.pug

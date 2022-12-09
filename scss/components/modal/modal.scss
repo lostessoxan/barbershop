@@ -1,0 +1,190 @@
+// =================== modal
+
+.modal {
+    min-height: 100vh;
+    place-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 10;
+    padding: 0 15px;
+}
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 15px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+    #closeBtn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: none;
+        cursor: pointer;
+
+        i {
+            line-height: 40px;
+            font-size: 35px;
+            color: #000;
+        }
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    .forms {
+        display: flex;
+        align-items: center;
+        height: 440px;
+        width: 200%;
+        transition: height .2s ease  ;
+    }
+
+    .signup {
+        opacity: 0;
+        transition: opacity 0.09s ease;
+    }
+
+    &.active .signup {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+    }
+
+    &.active .login {
+        margin-left: -50%;
+        opacity: 0;
+        transition: margin-left 0.18s ease, opacity 0.15s ease;
+    }
+
+    &.active .forms {
+        height: 600px;
+    }
+}
+
+.form {
+    background: #fff;
+    padding: 30px;
+    width: 50%;
+    transition: margin-left .18s ease;
+
+    .title {
+        position: relative;
+        font-size: 27px;
+        font-weight: 600;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: $p-c;
+            border-radius: 25px;
+        }
+    }
+
+    .input-field {
+        margin-top: 30px;
+        position: relative;
+        height: 50px;
+        width: 100%;
+
+        input {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 0 35px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-bottom: 2px solid #ccc;
+            border-top: 2px solid transparent;
+
+            &:is(:focus, :valid) {
+                border-bottom-color: $p-c;
+            }
+
+            &:is(:focus, :valid) ~ i {
+                color: $p-c;
+            }
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 19px;
+        }
+    }
+
+    .checkbox-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .checkbox-content {
+            display: flex;
+            align-items: center;
+
+            input {
+                margin: 0 8px -0.5px 4px;
+                accent-color: #4070f4;
+            }
+        }
+    }
+
+    .text {
+        color: #333;
+        font-size: 14px;
+    }
+
+    a.text {
+        color: $p-c;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    // ========
+
+    .button {
+        margin-top: 35px;
+
+        input {
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background: $p-c;
+            cursor: pointer;
+
+            &:hover {
+                background: #000;
+                font-weight: #fff;
+            }
+        }
+    }
+
+    .login-signup {
+        margin-top: 30px;
+        text-align: center;
+    }
+}

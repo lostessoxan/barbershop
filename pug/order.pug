@@ -1,0 +1,126 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <link rel="icon" href="../images/barber.svg">
+        <link rel="stylesheet" href="../styles/output.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <title>Order - Delamain</title>
+    body 
+        include ./components/modal.pug
+
+        #sideNav
+            nav 
+                ul
+                    <li><a href="index.html#">HOME</a></li>
+                    <li><a href="index.html#feature">FEATURES</a></li>
+                    <li><a href="index.html#service">SERVICES</a></li>
+                    <li><a href="index.html#testimonial">TESTIMONIALS</a></li>
+                    <li><a href="index.html#footer">MEET US</a></li>
+                    <li onclick="javascript:location.href='portfolio.html'">
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li onclick="javascript:location.href='#order'">
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <a href="#order">Order</a>
+                    </li>
+
+                .btns 
+                    button.btn.register Register
+                    button.btn.login Login
+
+        include ./components/sideNav.pug
+
+        //- ------------------------- >>>
+        
+        .order#order 
+            <div class="order-text title-text">
+                <p>Place An Order</p>
+            </div>
+
+            <form>
+
+                <div class="row">
+
+                    <div class="col">
+
+                        <h3 class="title">billing adress</h3>
+
+                        <div class="inputBox">
+                            <span>full name :</span>
+                            <input type="text" placeholder="Xavier Norman">
+                        </div>
+                        <div class="inputBox">
+                            <span>phone :</span>
+                            <input type="tel" placeholder="+#-###-###-####">
+                        </div>
+                        <div class="inputBox">
+                            <span>number of hair style :</span>
+                            <input type="text" placeholder="#">
+                        </div>
+                        <div class="inputBox">
+                            <span>date :</span>
+                            <input type="date" placeholder="">
+                        </div>
+
+                        <!-- <div class="flex">
+                            <div class="inputBox">
+                                <span>state :</span>
+                                <input type="text" placeholder="india">
+                            </div>
+                            <div class="inputBox">
+                                <span>zip code :</span>
+                                <input type="text" placeholder="123 321">
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- ============ -->
+
+                    <div class="col">
+
+                        <h3 class="title">payment</h3>
+
+                        <div class="inputBox">
+                            <span>cards accepted :</span>
+                            <img src="../images/card_img.png" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>name on card :</span>
+                            <input type="email" placeholder="john deo">
+                        </div>
+                        <div class="inputBox">
+                            <span>credit card number :</span>
+                            <input type="number" placeholder="####-####-####-####">
+                        </div>
+                        <!-- <div class="inputBox">
+                            <span>exp month :</span>
+                            <input type="text" placeholder="january">
+                        </div> -->
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>exp year :</span>
+                                <input type="text" placeholder="2022">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="###">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <input type="submit" value="proceed to checkout" class="submit-btn">
+
+            </form>
+
+        script(src="../script.js") 
+
+

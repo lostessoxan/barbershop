@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;500;600&display=swap);
+
+@font-face {
+    font-family: "Cali";
+    font-style: normal;
+    font-weight: 400;
+  
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Cali"),
+         /* Если не получилось, загрузит woff2 */
+         url("../cali.ttf") format("woff2")
+         /* Если браузер не поддерживает woff2, загрузит woff */
+}
+
+@font-face {
+    font-family: 'glory';
+    font-style: normal;
+    font-weight: 400;
+
+    src: local("glory"),
+        url(../amelaryas.ttf)
+}
